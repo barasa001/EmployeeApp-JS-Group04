@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8080;
 app.use(morgan('tiny'))
 
 //parse request to body-parser
-app.use(bodyparser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:true}))
 
 //set view engine
 app.set("view engine", "ejs")
@@ -27,7 +27,7 @@ app.use('/js', express.static(path.resolve(__dirname,"assets/js")))
 
 // Define a route
 app.get('/', (req, res) => {
-  res.send('Welcome to the Employee Management App!');
+  res.render('index');
 });
 
 // Start the server
