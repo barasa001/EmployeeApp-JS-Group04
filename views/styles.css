@@ -60,9 +60,8 @@ img{
     width:200px;
     height:40px;
     margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: -70px;
-box-shadow: none;
+    margin-bottom: 80px;
+    margin-top: -80px;
     transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -181,12 +180,32 @@ form {
     display: flex;
     gap: 10px;
     justify-content: center;
-    width: 900px;
+    width: 1000px;
 margin-top: -70px;
 }
 
 .form-group {
-    width: 100%;
+    -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        padding: 30px;
+        width: 500px;
+        height: 200px;
+        max-width: 1000px;
+        position: relative;
+        padding: 0px;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+    
+    #formFooter {
+        background-color: #f6f6f6;
+        border-top: 1px solid #dce8f1;
+        padding: 25px;
+        text-align: center;
+        -webkit-border-radius: 0 0 10px 10px;
+        border-radius: 0 0 10px 10px;
 }
 
 label {
@@ -198,7 +217,7 @@ label {
 
 input,
 select {
-    width: 100%;
+    width: 300px;
     padding: 1px;
     border: 1px solid #ccc;
     border-radius: 3px;
