@@ -1,0 +1,62 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="styles.css" >
+        <title>EMS</title>
+        <img src="Icon.png">
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <div class="container">
+                    <div class="text-container">
+                        <a href="/" class="nav-brand text-dark">Employee Management System</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <!-- /Header -->
+    <!-- Main Body -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav.d-flex-justify-between-text-center">
+                <a href="/add-employee" class="border-shadow1"> <span class"text-gradient"><i class="fa-solid fa-plus"></i>&nbsp;Add New Employee<span></a> 
+            </div>
+            <!-- Form Handling -->
+        <form action="/" methof="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Mark</td>
+                        <td>23</td>
+                        <td>HR</td>
+                        <td>400,000</td>
+                        <td>
+                            <a href="#" class="btn border-shadow update">
+                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                            <a href="#" class="btn border-shadow delete">
+                                <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        </div>
+    </main>
+    </body>
+    </html>

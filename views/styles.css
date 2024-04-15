@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --dark:#010300;
+    --light: #f2f2f0;
+    --border: #298f04;
+    --border-btn:#0a4a23;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+a{
+    text-decoration: none;
+
+    color:var(--border-btn);
+    font-family: "Ubuntu",
+        sans-serif;
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+}
+.container{
+    max-width: 1024px;
+     margin: auto;
+}
+.nav-brand{
+    font-size: 30px;
+    font-weight: bold;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.text-center{
+    text-align: center;
+}
+.border-shadow {
+    box-shadow: 1px 3px 10px #2d450735;
+}
+.border-shadow1{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #2d450735;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width:200px;
+    height:40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: -70px;
+box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.text-dark{
+color: var(--border-btn)
+}
+
+.inline{
+    display:inline-block;
+
+}
+.text-light{
+    color: var(--light);
+}
+.text-gradient{
+    background: linear-gradient(to right, #0a8037,#b1f249);
+    -webkit-background-clip: text;
+    background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#header nav{
+    width: 454px;
+    padding: 0.4em 0;
+    margin: 0 auto;
+}
+#site-main{
+    margin-top: 6em;
+    font-family:"Ubuntu",
+        sans-serif ;
+}
+#site-main container.box-nav > a{
+    font-size: 1em;
+    padding:.5em 1em;
+}
+#site-main.container form{
+    margin: 2em 0;
+}
+table{
+    border-spacing: 0px;
+    width: 100%
+}
+.table td,
+.table th{
+    padding: 1em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px 30px solid var(--border);
+}
+.table td>a.btn {
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover {
+    background-color: #1297001b;
+}
+
+.table tr:hover td>a {
+    box-shadow: none;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: var(--dark);
+    border-color: #32383e;
+}
+
+
+.border-shadow1:hover {
+    /* Animate the box-shadow for a glowing effect */
+    animation: glowingBoxShadow 20s linear infinite;
+}
+
+@keyframes glowingBoxShadow {
+    from {
+        box-shadow: 0 0 0 3px rgba(60, 255, 0, 0.3);
+    }
+
+    to {
+        box-shadow: 0 0 5px 3px rgb(119, 255, 0);
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid var(--border);
+    }
+
+    td {
+        border: none;
+        position: relative;
+    }
+
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 900px;
+margin-top: -70px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.text-light {
+    color: #999;
+}
+
+/* Button Styles */
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Conditional Fields Styles */
+#hr-details {
+    display: none;
+}
+
+#department:not([value="HR"])~#hr-details {
+    display: none;
+}
