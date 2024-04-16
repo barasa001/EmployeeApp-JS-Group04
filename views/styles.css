@@ -175,25 +175,30 @@ table{
     }
 
 }
-
+.filter{
+    display: flex;
+    margin: 0 auto;
+    margin-left: 300px;
+margin-bottom: 100px;
+margin-top: -80px;
+}
 form {
     display: flex;
     gap: 10px;
     justify-content: center;
     width: 1000px;
-margin-top: -70px;
+margin-top: -80px;
 }
 
 .form-group {
     -webkit-border-radius: 10px 10px 10px 10px;
         border-radius: 10px 10px 10px 10px;
         background: #fff;
-        padding: 30px;
-        width: 500px;
-        height: 200px;
-        max-width: 1000px;
+        /* padding: 30px; */
+        width: 400px;
+        height: 400px;
         position: relative;
-        padding: 0px;
+        padding: 10px;
         -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
         box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
         text-align: center;
@@ -230,17 +235,18 @@ select {
 
 /* Button Styles */
 button {
-    background-color: #3498db;
+    background-color: var(--border-btn);
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: none;
+    margin-top: 20px;;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #2d472b;
 }
 
 /* Conditional Fields Styles */
