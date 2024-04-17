@@ -20,8 +20,8 @@ exports.add_employee = (req, res) =>{
 
 exports.update_employee = (req, res) =>{
     axios.get('http://localhost:3000/api/employees', { params : { id : req.query.id }})
-        .then(function(emploeedata){
-            res.render("update_employees", { employee : employeedata.data})
+        .then(function(employeedata){
+            res.render("update_employee", { employee : employeedata.data})
         })
         .catch(err =>{
             res.send(err);

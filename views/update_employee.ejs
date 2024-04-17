@@ -19,23 +19,26 @@
         <!-- add Employee form -->
          <!-- form handling -->
  <form method="POST" id="update_employee">
-    <div class="new_employee">
+    <div class="new_employee">   
         <div class="form-group">
             <label for="id" class="text-light">ID</label>
-            <input type="text" name="id" value="" placeholder="Employee ID">
+            <input type="hidden" name="id" value="<%= employee._id %>">
+            <input type="text" name="id" value="<%= employee.id %>" placeholder="Employee ID">
         </div>
+             
         <div class="form-group">
             <label for="name" class="text-light">Name</label>
-            <input type="text" name="name" value="" placeholder="Employee Name">
+            <input type="hidden" name="id" value="<%= employee._id %>">
+            <input type="text" name="name" value="<%= employee.name %>" placeholder="Mark Stoenis">
         </div>
         <div class="form-group">
             <label for="department" class="text-light">Department</label>
-            <input type="text" name="department" value="" placeholder="Employee Department">
+            <input type="text" name="department" value="<%= employee.department %>" placeholder="Employee Department">
         </div>
         <div class="form-group">
             <label for="salary" class="text-light">Salary</label>
-            <input type="number" name="salary" value="" placeholder="Employee Salary">
-        </div>
+            <input type="number" name="salary" value="<%= employee.salary %>" placeholder="Employee Salary">
+        </div>        
 
         <div class="form-group">
             <button type="submit" class="btn text-dark update">Save</button>
