@@ -14,13 +14,13 @@ route.get('/', services.homeRoutes);
  *  @description add employees
  *  @method GET /add-employee
  */
-route.get('/add-employee', services.add_user)
+route.get('/add-employee', services.add_employee)
 
 /**
  *  @description for update employee
  *  @method GET /update-employee
  */
-route.get('/update-employee', services.update_user)
+route.get('/update-employee', services.update_employee)
 
 
 // API

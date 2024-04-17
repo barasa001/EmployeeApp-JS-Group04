@@ -1,31 +1,39 @@
-<!--include header-->
-<%- include('include/_header.ejs')%>
-    <!--/include header-->
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
     <main id="site-main">
         <div class="container">
-            <div class="box-nav.d-flex-justify-between-text-center">
-                <a href="/add_employee" class="border-shadow1"> <span class"text-gradient"><i
-                            class="fa-solid fa-plus"></i>&nbsp;Add New Employee<span></a>
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-employee" class="border-shadow">
+                    <span class="text-gradient">New Employee <i class="fas fa-user"></i></span>
+                </a>
             </div>
-            <!-- Form Handling -->
+
+            <!-- form handling -->
             <form action="/" method="POST">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th>Name</th>
                             <th>ID</th>
+                            <th>Name</th>
                             <th>Department</th>
                             <th>Salary</th>
-                            <th></th>
                         </tr>
                     </thead>
-                    <%- include('include/_show.ejs')%>
-
-                        </tbody>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
                 </table>
             </form>
         </div>
     </main>
-    <!--include footer-->
-    <%- include('include/_footer.ejs')%>
-        <!--/include footer-->
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

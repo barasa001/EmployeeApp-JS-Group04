@@ -22,6 +22,6 @@ const employeeSchema = new mongoose.Schema({
 });
 
 // Create the model using the schema
-const Employee = mongoose.model('Employee', employeeSchema);
+const Employeedb = mongoose.model('employeedb', employeeSchema);
 
-module.exports = Employee;
+module.exports = Employeedb;

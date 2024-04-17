@@ -1,5 +1,24 @@
- <!-- form handling -->
- <form action="/api/employees" method="POST" id="add_employee">
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Employees</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Employee</h2>
+            <span class="text-light">Use the below form to Update an Employee</span>
+        </div>
+
+        <!-- add Employee form -->
+         <!-- form handling -->
+ <form method="POST" id="update_employee">
     <div class="new_employee">
         <div class="form-group">
             <label for="id" class="text-light">ID</label>
@@ -16,7 +35,7 @@
         <div class="form-group">
             <label for="salary" class="text-light">Salary</label>
             <input type="number" name="salary" value="" placeholder="Employee Salary">
-        </div>        
+        </div>
 
         <div class="form-group">
             <button type="submit" class="btn text-dark update">Save</button>
@@ -24,3 +43,11 @@
 
     </div>
 </form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
