@@ -67,22 +67,22 @@ exports.update = (req, res)=>{
     if(!req.body){
         return res
             .status(400)
-            .send({ message : "Data to update can not be empty"})
+            .send({ message : "Data to update cannot be empty"});
     }
 
-    const id = req.params.id;
+    const id = req.body.id;
     Employeedb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if(!data){
-                res.status(404).send({ message : `Cannot Update employee with ${id}. Maybe employee not found!`})
+                res.status(404).send({ message : `Cannot update employee with ID ${id}. Employee not found!`});
             }else{
-                res.send(data)
+                res.send(data);
             }
         })
         .catch(err =>{
-            res.status(500).send({ message : "Error Update employee information"})
-        })
-}
+            res.status(500).send({ message : "Error updating employee information"});
+        });
+};
 
 // Delete a employee with specified employee id in the request
 exports.delete = (req, res)=>{
