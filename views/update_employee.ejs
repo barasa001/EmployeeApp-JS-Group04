@@ -19,16 +19,15 @@
         <!-- add Employee form -->
          <!-- form handling -->
          <form method="POST" id="update_employee">
-            <div class="new_employee">   
+            <div class="new_employee">
                 <div class="form-group">
                     <label for="id" class="text-light">ID</label>
-                    <input type="hidden" name="id" value="<%= employee.id %>">
                     <input type="text" name="id" value="<%= employee.id %>" placeholder="Employee ID" readonly>
                 </div>
                      
                 <div class="form-group">
                     <label for="name" class="text-light">Name</label>
-                    <input type="text" name="name" value="<%= employee.name %>" placeholder="Mark Stoenis">
+                    <input type="text" name="name" value="<%= employee.name %>" placeholder="Employee Name">
                 </div>
                 <div class="form-group">
                     <label for="department" class="text-light">Department</label>
@@ -42,9 +41,8 @@
                 <div class="form-group">
                     <button type="submit" class="btn text-dark update">Save</button>
                 </div>
-        
             </div>
-        </form>        
+        </form>                
        
     </div>
 </main>
