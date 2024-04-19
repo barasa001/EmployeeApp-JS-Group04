@@ -63,44 +63,45 @@ exports.find = (req, res)=>{
 }
 
 // Update a new idetified employee by employee id
-exports.update = (req, res)=>{
-    if(!req.body){
+// controller.js
+
+exports.update = (req, res) => {
+    if (!req.body) {
         return res
             .status(400)
-            .send({ message : "Data to update cannot be empty"});
+            .send({ message: "Data to update cannot be empty" });
     }
 
     const id = req.body.id;
-    Employeedb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
+    Employeedb.findOneAndUpdate({ id: id }, req.body, { useFindAndModify: false }) // Change to findOneAndUpdate and specify the custom id field
         .then(data => {
-            if(!data){
-                res.status(404).send({ message : `Cannot update employee with ID ${id}. Employee not found!`});
-            }else{
+            if (!data) {
+                res.status(404).send({ message: `Cannot update employee with ID ${id}. Employee not found!` });
+            } else {
                 res.send(data);
             }
         })
-        .catch(err =>{
-            res.status(500).send({ message : "Error updating employee information"});
+        .catch(err => {
+            res.status(500).send({ message: "Error updating employee information" });
         });
 };
 
-// Delete a employee with specified employee id in the request
-exports.delete = (req, res)=>{
+exports.delete = (req, res) => {
     const id = req.params.id;
 
-    Employeedb.findByIdAndDelete(id)
+    Employeedb.findOneAndDelete({ id: id }) // Change to findOneAndDelete and specify the custom id field
         .then(data => {
-            if(!data){
-                res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
-            }else{
+            if (!data) {
+                res.status(404).send({ message: `Cannot Delete with id ${id}. Maybe id is wrong` })
+            } else {
                 res.send({
-                    message : "Employee was deleted successfully!"
+                    message: "Employee was deleted successfully!"
                 })
             }
         })
-        .catch(err =>{
+        .catch(err => {
             res.status(500).send({
                 message: "Could not delete Employee with id=" + id
             });
         });
-}
+};
