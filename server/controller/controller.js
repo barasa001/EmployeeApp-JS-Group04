@@ -87,21 +87,17 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    const id = req.params.id;
+    const id = req.params._id; // Use req.params._id instead of req.params.id
 
-    Employeedb.findOneAndDelete({ id: id }) // Change to findOneAndDelete and specify the custom id field
+    Employeedb.findOneAndDelete({ _id: id }) // Ensure that '_id' matches your custom ID field name
         .then(data => {
             if (!data) {
-                res.status(404).send({ message: `Cannot Delete with id ${id}. Maybe id is wrong` })
+                res.status(404).send({ message: `Cannot delete employee with id ${id}. Employee not found!` })
             } else {
-                res.send({
-                    message: "Employee was deleted successfully!"
-                })
+                res.send({ message: "Employee was deleted successfully!" });
             }
         })
         .catch(err => {
-            res.status(500).send({
-                message: "Could not delete Employee with id=" + id
-            });
+            res.status(500).send({ message: "Could not delete employee with id=" + id });
         });
 };

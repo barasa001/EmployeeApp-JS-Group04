@@ -27,7 +27,7 @@ route.get('/update-employee', services.update_employee)
 route.post('/api/employees', controller.create);
 route.get('/api/employees', controller.find);
 route.put('/api/employees/:id', controller.update);
-route.delete('/api/employees/:id', controller.delete);
+route.delete('/api/employees/:_id', controller.delete);
 
 
 module.exports = route
