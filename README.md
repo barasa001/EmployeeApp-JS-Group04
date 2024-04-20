@@ -50,7 +50,3 @@
 - [Seth Barasa](https://github.com/barasa001)
 - [Kenzo Bless](https://github.com/Knirag)
   
-
-## License
-
-This project is licensed under the [MIT License](#).
