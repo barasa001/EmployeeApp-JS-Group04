@@ -31,16 +31,16 @@
    ```bash
    git clone https://github.com/your-username/employee-management-system.git
 2. Navigate to the project directory:
-   
+   ```bash
    cd employee-management-system
 
 3. Install dependencies:
-
+   ```bash
    npm install
 
 4. Set up the MongoDB database:
 5. Start the server:
-
+   ```bash
    npm start
 
 6. Open your web browser and navigate to http://localhost:3000 to access the application.
